@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Калькулятор Пискунов Н. А.</title>
+    </head>
+    <body>
+        <h1>Калькулятор</h1>
+        <form method="post">
+            <h2>
+                <label for="number">Введите значение:</label>
+                <input type="text" id="number" name="number" maxlength="4">
+                <input type="submit" value="Проверить">
+            </h2>
+        </form>
+        {% for message in get_flashed_messages() %}
+            <h2><div>{{ message }}</div></h2>
+        {% endfor %}
+    </body>
+</html>
